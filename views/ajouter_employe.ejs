@@ -1,0 +1,376 @@
+<!doctype html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+  data-style="light">
+
+
+  <style>
+
+    .list-group-item {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+  }
+  
+  .employee-details-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      text-align: center; 
+  }
+  
+  .employee-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+  }
+  .card {
+    margin-top: -55px; 
+}
+  </style>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>PGS site RH</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/image.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../assets/js/config.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
+  </head>
+
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" >
+          <div class="app-brand demo"  style="margin-top: 20px; height: 200px;">
+            <a href="/users" class="app-brand-link" >
+              
+              <img src="../img/logoPGS.jpeg" alt="App Logo" class="app-brand-logo demo" style="height: 100%; width: auto;" />
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm d-flex align-items-center justify-content-center"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow" style="margin-top: 100px;"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Liste des employes -->
+            <li class="menu-item active">
+                <a href="/users" class="menu-link">
+                    <div class="text-truncate" data-i18n="Analytics">Liste des employes</div>
+                </a>
+            </li>
+            
+            <!-- Ajouter un employe -->
+            <li class="menu-item active">
+                <a href="/users/ajouter_employe" class="menu-link">
+                    <div class="text-truncate" data-i18n="Analytics">Ajouter un employe</div>
+                </a>
+            </li>
+            
+            <!-- Liste des contrats -->
+            <li class="menu-item active">
+                <a href="/contrats" class="menu-link">
+                    <div class="text-truncate" data-i18n="Analytics">Liste des contrats</div>
+                </a>
+            </li>
+            
+            <!-- Ajouter un contrat -->
+            <li class="menu-item active">
+                <a href="/contrats/ajouter_contrat" class="menu-link">
+                    <div class="text-truncate" data-i18n="Analytics">Ajouter un contrat</div>
+                </a>
+            </li>
+            <li class="menu-item active">
+              <a href="/contrats_expires" class="menu-link">
+                  <div class="text-truncate" data-i18n="Analytics">contrats à expirer</div>
+              </a>
+          </li>
+            
+            <!-- Liste des services -->
+            <li class="menu-item active">
+                <a href="/services" class="menu-link">
+                    <div class="text-truncate" data-i18n="Analytics">Liste des services</div>
+                </a>
+            </li>
+            <li class="menu-item active">
+                <a href="/services/ajouter_service" class="menu-link">
+                    <div class="text-truncate" data-i18n="Analytics">Ajouter un service</div>
+                </a>
+            </li>
+            
+            <!-- Attestation -->
+            <li class="menu-item active">
+                <a href="/attestation" class="menu-link">
+                    <div class="text-truncate" data-i18n="Analytics">Attestation</div>
+                </a>
+            </li>
+        </ul>
+        
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+        
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <!-- / Content -->
+
+           
+
+                     <div class="container-xxl flex-grow-1 container-p-y">
+            
+            
+<!-- DataTable with Buttons -->
+<div class="row my-6">
+    <div class="col">
+      <div class="d-flex justify-content-center align-items-center vh-200 mt-8"></div>
+      <div class="card w-100 " style="padding: 0 15px;  " >
+        <h2 class="accordion-header" id="headingEmployeeForm">
+           
+        </h2>
+        <div id="collapseEmployeeForm" class="accordion-collapse collapse show" data-bs-parent="#collapsibleSection">
+            <div class="accordion-body">
+                <form id="employeeForm" action="/users/add-employe" method="POST" style="margin-top: 30px; margin-bottom: 30px;">
+                    <div class="row g-6">
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-matricule">Matricule</label>
+                            <input type="text" id="collapsible-matricule" name="matricule" class="form-control" placeholder="658468" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-nom">Nom</label>
+                            <input type="text" id="collapsible-nom" name="nom" class="form-control" placeholder="Nom employé" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-prenom">Prénom</label>
+                            <input type="text" id="collapsible-prenom" name="prenom" class="form-control" placeholder="Prénom employé" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-sexe">Sexe</label>
+                            <select id="collapsible-sexe" name="sexe" class="select2 form-select" data-allow-clear="true">
+                                <option value="">Select</option>
+                                <option value="F">Femme</option>
+                                <option value="H">Homme</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-diplome">Diplôme</label>
+                            <input type="text" id="collapsible-diplome" name="diplome" class="form-control" placeholder="exemple: cadre" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-date-depart">Date de départ</label>
+                            <input type="text" id="collapsible-date-depart" name="date_depart" class="form-control date-mask" placeholder="MM/DD/YYYY" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-motif">Motif</label>
+                            <input type="text" id="collapsible-motif" name="motif" class="form-control" placeholder="motif" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-cin">N° CIN</label>
+                            <input type="text" id="collapsible-cin" name="cin" class="form-control" placeholder="12345678" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-cnss">N° CNSS</label>
+                            <input type="text" id="collapsible-cnss" name="cnss" class="form-control" placeholder="n° cnss" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-fonction">Fonction</label>
+                            <input type="text" id="collapsible-fonction" name="fonction" class="form-control" placeholder="exemple: technicien" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-societe">Société</label>
+                            <input type="text" id="collapsible-societe" name="societe" class="form-control" placeholder="exemple: PGS" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-tel">N° téléphone</label>
+                            <input type="text" id="collapsible-tel" name="tel" class="form-control" placeholder="12345678" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-date-naiss">Date de naissance</label>
+                            <input type="text" id="collapsible-date-naiss" name="date_naiss" class="form-control date-mask" placeholder="MM/DD/YYYY" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-lieu">Lieu</label>
+                            <input type="text" id="collapsible-lieu" name="lieu" class="form-control" placeholder="exemple: Mégrine" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-etat-civil">Etat civil</label>
+                            <select id="collapsible-etat-civil" name="etat_civil" class="select2 form-select" data-allow-clear="true">
+                                <option value="">Select</option>
+                                <option value="Marié(e)">Marié(e)</option>
+                                <option value="Célibataire">Célibataire</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-date-titularisation">Date de titularisation</label>
+                            <input type="text" id="collapsible-date-titularisation" name="date_titularisation" class="form-control date-mask" placeholder="MM/DD/YYYY" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="collapsible-n-enf">Nombre d'enfants</label>
+                            <input type="text" id="collapsible-n-enf" name="n-enf" class="form-control" />
+                        </div>
+                    </div>  
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-secondary me-4">Ajouter</button>
+                        <button type="reset" class="btn btn-danger">Annuler</button>
+                    </div>
+                </form>
+                
+            
+            </div>
+        </div>
+      </div>
+    </div>
+    
+      
+       
+       
+      </div>
+    </div>
+  </div>
+  
+
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+   
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../assets/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="../assets/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag before closing body tag for github widget button. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+
+flatpickr("#collapsible-date-depart", {
+        dateFormat: "d/m/Y", // Format de la date en dd/mm/yyyy
+        altInput: true,
+        altFormat: "d/m/Y",
+        enableTime: false
+    });
+
+    flatpickr("#collapsible-date-naiss", {
+        dateFormat: "d/m/Y", // Format de la date en dd/mm/yyyy
+        altInput: true,
+        altFormat: "d/m/Y",
+        enableTime: false
+    });
+    flatpickr("#collapsible-date-titularisation", {
+        dateFormat: "d/m/Y", // Format de la date en dd/mm/yyyy
+        altInput: true,
+        altFormat: "d/m/Y",
+        enableTime: false
+    });
+    document.getElementById('employeeForm').addEventListener('submit', function(e) {
+        // Trouver les éléments de date
+        var dateDepartInput = document.getElementById('collapsible-date-depart').value;
+        var dateNaissInput = document.getElementById('collapsible-date-naiss').value;
+        var dateTitularisationInput = document.getElementById('collapsible-date-titularisation').value;
+
+        // Fonction pour formater la date
+        function formatDate(dateInput) {
+            if (dateInput) {
+                var dateParts = dateInput.split('/');
+                if (dateParts.length === 3) {
+                    return `${dateParts[0]}/${dateParts[1]}/${dateParts[2]}`;
+                } else {
+                    console.error('Date format is incorrect');
+                }
+            }
+            return '';
+        }
+
+        // Formater les dates
+        document.getElementById('collapsible-date-depart').value = formatDate(dateDepartInput);
+        document.getElementById('collapsible-date-naiss').value = formatDate(dateNaissInput);
+        document.getElementById('collapsible-date-titularisation').value = formatDate(dateTitularisationInput);
+
+    });
+    </script>
+
+
+
+    
+    
+  </body>
+  
+</html>
